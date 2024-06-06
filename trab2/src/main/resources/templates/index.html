@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova 2</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="container">
+    <div class="topo">
+        <span class="titulo">Notas das Turmas</span>
+        <a href="/#" onclick="abreNovo()" class="botao-topo" id="addAlunoBtn">+ ALUNO</a>
+        <a href="/#" onclick="reset()" class="botao-topo">RESET</a>
+        <a href="/#" onclick="zerar()" class="botao-topo">ZERAR</a>
+    </div>
+
+    <canvas id="canvas" width="700" height="450"></canvas>
+
+    <div id="tooltip" hidden="hidden"></div>
+    <div id="id-selecionado" hidden="hidden"></div>
+
+</div>
+
+<div class="painel">
+    <p>Selecione a turma</p>
+
+    <select name="turmas" id="dropbox" onchange="modificarTurma()" class="select-turma">
+        <optgroup label="Prof. Stan Lee">
+            <option value="1">Turma 1</option>
+        </optgroup>
+        <optgroup label="Prof. John Buscema">
+            <option value="2">Turma 2</option>
+        </optgroup>
+    </select>
+</div>
+
+<script defer src="/script.js"></script>
+
+</body>
+</html>

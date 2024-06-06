@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Prova 2</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<script>
+  var dadosArquivados = JSON.parse(sessionStorage.getItem('turmaSelecionada'));
+</script>
+
+<div class="container">
+  <div class="topo">
+    <span class="titulo">Novo Aluno</span>
+    <a href="/" class="botao-topo">CANCELAR</a>
+  </div>
+
+  <div class="painel-edit">
+
+    <div class="grid-campos">
+      <div class="campo">Nome</div>
+      <input id="nome" class="campo nome" type="text">
+
+      <div class="campo">Matrícula</div>
+      <input id="matricula" class="campo matr" type="text">
+
+      <div class="campo">Turma</div>
+      <input id="turma" class="campo nota" type="number" value={dadosArquivados}>
+
+      <div class="campo">Nota</div>
+      <input id="nota" class="campo nota" type="number">
+
+    </div>
+
+  </div>
+
+  <a href="#" onclick="enviaNovo()" class="botao-topo">ENVIAR</a>
+
+  <div class="painel-edit" id="mensagem" hidden="hidden"></div>
+
+
+</div>
+
+<script src="/script.js"></script>
+<script src="/scriptNovo.js"></script>
+
+
+
+
+</body>
+</html>
